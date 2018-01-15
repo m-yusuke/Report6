@@ -9,32 +9,25 @@ public class VendingMachine {
     private int amountMoney;
     //個数
     private int number;
+    //空かどうか
+    private boolean empty;
+    //繰り返すかどうか
+    private boolean repeat;
 
     public VendingMachine (int productNumber, String name, int amountMoney, int number) {
         this.productNumber = productNumber;
         this.name = name;
         this.amountMoney = amountMoney;
         this.number = number;
-    }
-
-    public void setProductNumber(int productNumber) {
-        this.productNumber = productNumber;
+        repeat = true;
     }
 
     public int getProductNumber() {
         return productNumber;
     }
 
-    public void setName (String name) {
-        this.name = name;
-    }
-
     public String getName() {
         return name;
-    }
-
-    public void setAmountMoney(int amountMoney) {
-        this.amountMoney = amountMoney;
     }
 
     public int getAmountMoney() {
@@ -47,5 +40,28 @@ public class VendingMachine {
 
     public int getNumber() {
         return number;
+    }
+
+    public boolean isEmpty() {
+        return empty;
+    }
+
+    public void setRepeat(boolean repeat) {
+        this.repeat = repeat;
+    }
+
+    public boolean isRepeat() {
+        return repeat;
+    }
+
+    public int change (int sumMoney, int selectMoney) {
+        return sumMoney - selectMoney;
+    }
+
+    public void decreased() {
+        number -= 1;
+        if(number == 0) {
+            empty = true;
+        }
     }
 }
