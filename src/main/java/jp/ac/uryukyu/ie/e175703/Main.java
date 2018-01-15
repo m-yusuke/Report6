@@ -45,8 +45,6 @@ public class Main {
                 System.out.printf("只今の合計投入金額は%d円です\n", sumMoney);
             }
             select.decreased();
-            restNumber = select.getNumber() - 1;
-            select.setNumber(restNumber);
             int change = select.change(sumMoney, select.getAmountMoney());
             System.out.printf("[%s]\n", select.getName());
             System.out.printf("おつりは%d円です\n", change);

@@ -17,6 +17,7 @@ public class VendingMachine {
     public VendingMachine (int productNumber, String name, int amountMoney, int number) {
         this.productNumber = productNumber;
         this.name = name;
+        empty = false;
         this.amountMoney = amountMoney;
         this.number = number;
         repeat = true;
@@ -40,6 +41,10 @@ public class VendingMachine {
 
     public int getNumber() {
         return number;
+    }
+
+    public void setEmpty(boolean empty) {
+        this.empty = empty;
     }
 
     public boolean isEmpty() {
