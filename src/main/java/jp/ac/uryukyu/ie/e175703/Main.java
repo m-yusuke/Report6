@@ -37,7 +37,6 @@ public class Main {
             System.out.printf("選択された商品は%sです\n", select.getName());
             System.out.println("お金を入れてください");
             int sumMoney = 0;
-            int restNumber;
             int money = -1;
             while (money != 0 && sumMoney < select.getAmountMoney()) {
                 money = in.nextInt(); in.nextLine();
